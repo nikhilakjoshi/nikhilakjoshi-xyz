@@ -5,7 +5,7 @@ import profPic from "./../images/profpic.jpg";
 
 const AboutMe = () => {
   return (
-    <AboutMeSection className="mx-auto container px-6 xl:px-80 py-36" id="about">
+    <AboutMeSection className="mx-auto container px-6 xl:px-60 py-36" id="about">
       <div className="name text-3xl font-bold mt-8 mb-8 aboutmetitle">About me</div>
       <div className="flex flex-col xl:flex-row gap-16 items-center">
         <div className="textsection text-sm lg:basis-3/5 basis-full text font-mono leading-6">

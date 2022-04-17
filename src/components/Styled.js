@@ -103,3 +103,20 @@ export const CompRoleDesc = styled.div`
     }
   }
 `;
+
+export const FeaturedProjectRoot = styled.article`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+  .projDescription {
+    grid-column: ${(p) => (p.isOdd ? "1 / 8" : "7 / -1")};
+    text-align: ${(p) => (p.isOdd ? "left" : "right")};
+    grid-row: 1 / -1;
+    z-index: 1;
+  }
+  .projImage {
+    grid-column: ${(p) => (p.isOdd ? "6 / -1" : "1 / 8")};
+    grid-row: 1 / -1;
+  }
+`;

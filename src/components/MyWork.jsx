@@ -9,7 +9,7 @@ const MyWork = () => {
   const [selectedComp, setSelectedComp] = useState("Maveric (SCB)");
 
   return (
-    <MyWorkSection className="mx-auto container px-6 xl:px-80 py-36" id="mywork">
+    <MyWorkSection className="mx-auto container px-6 xl:px-60 py-36" id="mywork">
       <div className="name text-3xl font-bold mt-8 mb-8 myworktitle ml-40">My Work</div>
       <div className="contentContainer items-start gap-12 flex-col xl:flex-row-reverse flex">
         <nav className="worklist w-full xl:w-auto overflow-x-scroll xl:overflow-x-auto">
