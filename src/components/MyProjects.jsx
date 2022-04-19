@@ -4,11 +4,24 @@ import bbd from "./../images/bluebuckdesigns.png";
 import brs from "./../images/bikerentalservices.png";
 import das from "./../images/desireacservices.png";
 import vsi from "./../images/vaccineslotsindia.png";
+import smp from "./../images/scmarketplace.png";
 import HighLightSpan from "./commons/HighLightSpan";
 import { ReactComponent as GitIcon } from "./../svgs/git.svg";
 import { ReactComponent as LinkIcon } from "./../svgs/link.svg";
 
 const featureProjects = [
+  {
+    __id: 0,
+    projectTitle: "SC Marketplace",
+    projectDescription: [
+      "Standard chartered bank's public facing site for developers and businesses to choose from a variety of the bank's open APIs. The sandbox feature of this webapp allows for easy and quick integration with external developers who want to try and consure SC's APIs.",
+      "It features a first of its kind mashup feature along with most handy features in this category to ease a businesses testing and development lifecycle with respect to consuming bank APIs",
+    ],
+    tools: ["ReactJS", "styled-components", "create-react-app", "craco", "BitBucket", "Jenkins", "groovy lang", "JIRA"],
+    image: smp,
+    projectLink: "https://axess.sc.com/marketplace",
+    // repoLink: "https://github.com/nikhilakjoshi/portfolio2",
+  },
   {
     __id: 1,
     projectTitle: "Bluebuck Designs",
@@ -49,8 +62,7 @@ const featureProjects = [
     __id: 4,
     projectTitle: "Covid-19 Vaccine Slots India",
     projectDescription: [
-      "A site built to have a quick glance at the Covid 19 vaccine slots making use of the Indian government's public COWIN apis",
-      "I built this initially only for my family and myself when searching via the Aarogyasetu app was a bit time consuming.",
+      "A site built to have a quick glance at the Covid 19 vaccine slots making use of the Indian government's public COWIN apis. I built this initially only for my family and myself when searching via the Aarogyasetu app was a bit time consuming.",
       "But then I ended up spending a bit more time to make any location/ hospital conducting vaccine drives searchable.",
     ],
     tools: ["ReactJS", "tailwindcss", "NextJS", "Vercel", "Github"],
@@ -80,11 +92,11 @@ const FeaturedProject = ({ projectTitle, projectLink, projectDescription, tools,
         </a>
         <div className="desc bg-[#092743] shadow-xl p-6 text-sm rounded-md">
           {projectDescription.map((des, i) => (
-            <p className="first:mb-2" key={i}>
+            <p className="mb-2 last:mb-0" key={i}>
               {des}
             </p>
           ))}
-          <div className="w-1/2 ml-auto border-b my-6 border-slate-600"></div>
+          <div className={`w-1/2 ${index % 2 == 0 && "ml-auto"} border-b my-6 border-slate-600`}></div>
           <div className="tools gap-1 grid grid-cols-3 ml-auto text-left text-[11px] font-mono">
             {tools.map((tool, i) => (
               <HighLightSpan key={i}>{tool}</HighLightSpan>
@@ -92,17 +104,21 @@ const FeaturedProject = ({ projectTitle, projectLink, projectDescription, tools,
           </div>
         </div>
         <div className="links flex gap-6 mt-6 items-center">
-          <a href={repoLink} rel="noopener noreferrer" className={index % 2 == 0 && "ml-auto"} target="_blank">
-            <GitIcon width={22} height={22} className="fill-gray-50 hover:fill-[#ffef77]" />
-          </a>
-          <a href={projectLink} rel="noopener noreferrer" target="_blank">
-            <LinkIcon width={22} height={22} className="fill-gray-50 hover:fill-[#ffef77]" />
-          </a>
+          <div className={index % 2 == 0 ? "ml-auto flex gap-6 items-center" : "flex gap-6 items-center"}>
+            {repoLink && (
+              <a href={repoLink} rel="noopener noreferrer" target="_blank">
+                <GitIcon width={22} height={22} className="fill-gray-50 hover:fill-[#ffef77]" />
+              </a>
+            )}
+            <a href={projectLink} rel="noopener noreferrer" target="_blank">
+              <LinkIcon width={22} height={22} className="fill-gray-50 hover:fill-[#ffef77]" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="projImage relative h-full">
         <a href={projectLink} rel="noopener noreferrer" target="_blank">
-          <img src={image} alt="" className="rounded-md h-full w-full" />
+          <img src={image} alt="" className="rounded-md h-full w-full border border-[#73e6e0]" />
           <div className="absolute w-full h-full bg-[#73e6e0] inset-0 rounded-md opacity-30 hover:opacity-0 transition-opacity origin-center"></div>
           <div className="absolute w-full h-full border-2 rounded-md border-[#73e6e0] top-4 left-4 -z-10 bg-[#73e6e0] bg-opacity-10"></div>
         </a>
