@@ -85,12 +85,20 @@ const MyProjects = () => {
 
 const FeaturedProject = ({ projectTitle, projectLink, projectDescription, tools, image, repoLink, index }) => {
   return (
-    <FeaturedProjectRoot className="mb-44 mt-24" isOdd={index % 2 == 1}>
-      <div className="projDescription">
+    <FeaturedProjectRoot className="mb-44 mt-24 grid grid-cols-12 items center gap-3" isOdd={index % 2 == 1}>
+      <div
+        className={
+          index % 2 == 1
+            ? "bg-[#092743] rounded-md p-4 bg-opacity-80 xl:bg-transparent col-start-1 col-end-[-1] xl:col-start-1 xl:col-end-8 text-left row-start-1 row-end-[-1] z-[1]"
+            : "bg-[#092743] rounded-md p-4 bg-opacity-80 xl:bg-transparent col-start-1 col-end-[-1] xl:col-start-7 xl:col-end-[-1] text-left xl:text-right row-start-1 row-end-[-1] z-[1]"
+        }
+      >
         <a href={projectLink} rel="noopener noreferrer" target="_blank">
-          <h3 className="text-2xl font-bold mb-4 hover:text-[#ffef77]">{projectTitle}</h3>
+          <h3 className="text-2xl font-bold mb-4 text-[#ffef77] xl:text-slate-100 hover:text-[#ffef77]">
+            {projectTitle}
+          </h3>
         </a>
-        <div className="desc bg-[#092743] shadow-xl p-6 text-sm rounded-md">
+        <div className="desc xl:bg-[#092743] shadow-xl xl:p-6 text-sm rounded-md">
           {projectDescription.map((des, i) => (
             <p className="mb-2 last:mb-0" key={i}>
               {des}
@@ -116,9 +124,15 @@ const FeaturedProject = ({ projectTitle, projectLink, projectDescription, tools,
           </div>
         </div>
       </div>
-      <div className="projImage relative h-full">
+      <div
+        className={
+          index % 2 == 1
+            ? "col-start-1 col-end-[-1] relative h-full xl:col-start-6 xl:col-end-[-1] row-start-1 row-end-[-1]"
+            : "col-start-1 col-end-[-1] relative h-full xl:col-start-1 xl:col-end-8 row-start-1 row-end-[-1]"
+        }
+      >
         <a href={projectLink} rel="noopener noreferrer" target="_blank">
-          <img src={image} alt="" className="rounded-md h-full w-full border border-[#73e6e0]" />
+          <img src={image} alt="" className="object-cover rounded-md h-full w-full border border-[#73e6e0]" />
           <div className="absolute w-full h-full bg-[#73e6e0] inset-0 rounded-md opacity-30 hover:opacity-0 transition-opacity origin-center"></div>
           <div className="absolute w-full h-full border-2 rounded-md border-[#73e6e0] top-4 left-4 -z-10 bg-[#73e6e0] bg-opacity-10"></div>
         </a>
