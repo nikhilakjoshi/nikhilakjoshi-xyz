@@ -105,3 +105,5 @@ export const CompRoleDesc = styled.div`
 `;
 
 export const FeaturedProjectRoot = styled.article``;
+
+export const FooterRoot = styled.footer``;

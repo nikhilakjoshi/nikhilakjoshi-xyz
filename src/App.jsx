@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import MyWork from "./components/MyWork";
 import MyProjects from "./components/MyProjects";
+import { Helmet } from "react-helmet";
+import Footer from "./components/Footer";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -20,6 +22,11 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <ThemeProvider theme={theme.default}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Nikhil Joshi</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <GlobalStyle />
       <NavBar />
       <main>
@@ -28,6 +35,7 @@ function App() {
         <MyWork />
         <MyProjects />
       </main>
+      <Footer />
     </ThemeProvider>
   );
 }

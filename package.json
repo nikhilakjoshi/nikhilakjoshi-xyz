@@ -10,6 +10,7 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-helmet": "^6.1.0",
     "react-location": "^3.3.4",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.5",
