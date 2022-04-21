@@ -3,10 +3,10 @@ import HighLightSpan from "./commons/HighLightSpan";
 import { CompLi, CompRoleDesc, MyWorkSection } from "./Styled";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
-const CompList = ["Maveric (SCB)", "Maveric (TFO)", "Maveric (Internal)", "Others"];
+const CompList = ["Maveric", "Others"];
 
 const MyWork = () => {
-  const [selectedComp, setSelectedComp] = useState("Maveric (SCB)");
+  const [selectedComp, setSelectedComp] = useState("Maveric");
 
   return (
     <MyWorkSection className="mx-auto container px-6 xl:px-60 py-36" id="mywork">
@@ -35,7 +35,7 @@ const MyWork = () => {
               timeout={100}
               classNames="fade"
             >
-              {selectedComp == "Maveric (SCB)" ? (
+              {selectedComp == "Maveric" ? (
                 <MavericBanking />
               ) : selectedComp == "Maveric (TFO)" ? (
                 <MavericWealth />
@@ -55,10 +55,10 @@ const MyWork = () => {
 const MavericBanking = () => (
   <CompRoleDesc className="maveric">
     <h4 className="text-xl text-display mb-2 font-bold">
-      Full Stack Engineer <HighLightSpan>@ Standard Chartered Bank</HighLightSpan>
+      Full Stack Engineer <HighLightSpan>@ Maveric Systems</HighLightSpan>
     </h4>
     <div className="font-mono text-slate-400">
-      <p className="mb-4">Dec 2020 - Present</p>
+      <p className="mb-4">Sept 2019 - Present</p>
       <ul className="descList text-sm">
         <li>
           Provide high fidelity mockups, wireframes and prototypes to business stakeholders and UI/UX teams and
@@ -70,6 +70,14 @@ const MavericBanking = () => (
         </li>
         <li>Handle scrum activities during release cycles</li>
         <li>Prepare low level how to use documents which help business users to use the built tool to its potential</li>
+        <li>Brainstorming sessions with the UI/UX team</li>
+        <li>Building UI components and dashboards.</li>
+        <li>App Integration with AWS Cognito & Azure AD. AWS Cognito POC and configuration</li>
+        <li>Extract iOS artefacts and upload to test flight</li>
+        <li>Designing, Data Modelling and Feature Development</li>
+        <li>Building UI components and dashboards.</li>
+        <li>Dockerizing the frontend and backend application and deployment into a linux system</li>
+        <li>Presenting progress and going through multiple iterations of delivery and enhancement</li>
       </ul>
       <div className="techwrapper my-6">
         <h6 className="mb-2">Tech stack used:</h6>

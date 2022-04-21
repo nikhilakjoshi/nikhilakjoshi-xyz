@@ -10,18 +10,18 @@ import { ReactComponent as GitIcon } from "./../svgs/git.svg";
 import { ReactComponent as LinkIcon } from "./../svgs/link.svg";
 
 const featureProjects = [
-  {
-    __id: 0,
-    projectTitle: "SC Marketplace",
-    projectDescription: [
-      "Standard chartered bank's public facing site for developers and businesses to choose from a variety of the bank's open APIs. The sandbox feature of this webapp allows for easy and quick integration with external developers who want to try and consure SC's APIs.",
-      "It features a first of its kind mashup feature along with most handy features in this category to ease a businesses testing and development lifecycle with respect to consuming bank APIs",
-    ],
-    tools: ["ReactJS", "styled-components", "create-react-app", "craco", "BitBucket", "Jenkins", "groovy lang", "JIRA"],
-    image: smp,
-    projectLink: "https://axess.sc.com/marketplace",
-    // repoLink: "https://github.com/nikhilakjoshi/portfolio2",
-  },
+  // {
+  //   __id: 0,
+  //   projectTitle: "SC Marketplace",
+  //   projectDescription: [
+  //     "Standard chartered bank's public facing site for developers and businesses to choose from a variety of the bank's open APIs. The sandbox feature of this webapp allows for easy and quick integration with external developers who want to try and consure SC's APIs.",
+  //     "It features a first of its kind mashup feature along with most handy features in this category to ease a businesses testing and development lifecycle with respect to consuming bank APIs",
+  //   ],
+  //   tools: ["ReactJS", "styled-components", "create-react-app", "craco", "BitBucket", "Jenkins", "groovy lang", "JIRA"],
+  //   image: smp,
+  //   projectLink: "https://axess.sc.com/marketplace",
+  //   // repoLink: "https://github.com/nikhilakjoshi/portfolio2",
+  // },
   {
     __id: 1,
     projectTitle: "Bluebuck Designs",
