@@ -33,7 +33,7 @@ const AboutMe = () => {
           </p>
           <p className="mb-4">
             <span className="text-slate-400">
-              On the backend bit of things, I have worked on building RESTful APIs usign{" "}
+              On the backend bit of things, I have worked on building RESTful APIs using{" "}
               <HighLightSpan>NodeJS</HighLightSpan> and more recently <HighLightSpan>JavaSpringBoot</HighLightSpan>.
             </span>
           </p>

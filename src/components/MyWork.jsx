@@ -27,7 +27,7 @@ const MyWork = () => {
             ))}
           </ul>
         </nav>
-        <div className="selected xl:basis-3/5 grow h-[30rem]">
+        <div className="selected xl:basis-3/5 grow xl:h-[30rem]">
           <SwitchTransition mode="out-in">
             <CSSTransition
               key={selectedComp}
